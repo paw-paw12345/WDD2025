@@ -1,23 +1,201 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Contact Form</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body {
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: blue;
+            color:whitesmoke;
+            padding: 1rem;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: white(254, 254, 254);
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        header nav a:hover {
+            background-color:purple;
+        }
+
+        .hero-img {
+            width: 100%;
+            position: relative;
+        }
+
+        .hero-img img {
+            width: 100%;
+            height: 70vh;
+        }
+
+        .msg {
+            position:absolute;
+            top: 30%;
+            color:black;
+            left: 25%;
+            right: 50%;
+            text-align: center;
+        }
+
+        .msg button {
+            border: 1px solid red;
+            background-color: transparent;
+            color: white;
+        }
+
+        .msg button:hover {
+            background-color: white;
+            color: black;
+            border: 2px solid blue;
+        }
+
+        .menu-cont {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            
+        }
+
+        .menu-item {
+            margin: 1rem;
+            padding: 1rem;
+            border: 1px solid blueviolet;
+            border-radius: 10px;
+            width: 200px;
+        }
+
+        .menu-item h3 {
+            text-align: center;
+        }
+
+        .about-cont {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .about-cont img {
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        .about-cont p {
+            text-align: justify;
+            line-height: 1.5rem;
+        }
+
+        hr {
+            width: 150px;
+            border: 1px solid blue;
+        }
+
+        button {
+            padding: 10px;
+            background-color: brown;
+            border: 0;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .contact-cont {
+            background-color: lightgr;
+            padding: 2rem;
+        }
+
+        .contact-cont h1 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <div class="cont">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.8635353388686!2d-0.18297052592364954!3d5.732786531848573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf77d6f9aed69b%3A0x4b72360d02bc529b!2sAgape%20Academy%20International!5e0!3m2!1sen!2sgh!4v1758822509656!5m2!1sen!2sgh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          <div class="cont-map">
-            <div class="form">
-                <h1>Contact Form</h1>
-                <form>
-                    <input type="text" name="clientName" placeholder="Client Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <textarea name="message" placeholder="Type message here" required></textarea>
-                    <button type="submit">Submit</button>
-                </form>
+    <header>
+        <h1>My Restaurant</h1>
+        <nav>
+            <a href="">Home</a>
+            <a href="">Menu</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+        </nav>
+        <button>Order Now</button>
+    </header>
+    <main>
+        <div class="restaurant-img">
+            <img src="https://i.pinimg.com/1200x/0d/c4/cb/0dc4cbe09e7ef3d3907adc3103e7047e.jpg" alt="">
+            <div class="msg">
+                <h1>Welcome to My Restaurant</h1>
+                <p>Check out about my restaurant.
+                    It is the best in the country.
+                    We serve the best dishes in the country.
+                    We are ready to serve you.
+                    And we are open 24/7.
+                    You are always welcome to visit us.
+
+                </p>
+                <button>Read more</button>
             </div>
-          </div>
-     </div>
+        </div>
+
+        <!-- Menu section -->
+        <div class="menu-cont">
+            <div class="menu-item">
+                <h3>Jollof Rice</h3>
+                <p>₵35</p>
+            </div>
+            <div class="menu-item">
+                <h3>Banku</h3>
+                <p>₵50</p>
+            </div>
+            <div class="menu-item">
+                <h3>Wakye</h3>
+                <p>₵25</p>
+            </div>
+            <div class="menu-item">
+                <h3>Salad</h3>
+                <p>₵15</p>
+            </div>
+        </div>
+
+        <!-- About section -->
+        <div class="about-cont">
+            <img src="https://i.pinimg.com/736x/d7/51/99/d751995a8bb545b06894a2fd021cb627.jpg" alt="">
+            <div>
+                <h1>ABOUT US</h1>
+                <hr>
+                <p>We are a family-owned restaurant that has been serving delicious food since 2025 of April 9.
+                    Our mission is to provide our customers with the best dining experience possible.
+                    We believe in using fresh ingredients and traditional recipes to create dishes that are both flavorful and satisfying.
+                    Our team is dedicated to ensuring that every customer leaves our restaurant happy and satisfied.
+                    We look forward to serving you and your family for many years to come.
+                </p>
+                <button>Read more</button>
+            </div>
+        </div>
+
+        <!-- Contact section -->
+        <div class="contact-cont">
+            <h1>CONTACT US</h1>
+            <hr>
+            <form>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Message"></textarea>
+                <button>Send</button>
+            </form>
+        </div>
+    </main>
 </body>
 </html>
